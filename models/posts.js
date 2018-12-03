@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER
   }, {});
   posts.associate = function(models) {
-    // associations can be defined here
+    posts.belongsTo(models.users);
   };
   return posts;
 };
